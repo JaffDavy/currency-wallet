@@ -1,10 +1,5 @@
 export const CURRENCIES = {
-  USD: { symbol: '$', rateToUSD: 1 },
-  EUR: { symbol: '€', rateToUSD: 1.24 },
-  XAF: { symbol: 'FCFA', rateToUSD: 0.0016 },
-};
-
-export const convert = (amount, from, to) => {
-  const amountInUSD = amount * CURRENCIES[from].rateToUSD;
-  return amountInUSD / CURRENCIES[to].rateToUSD;
+  USD: { name: 'US Dollar', symbol: '$', rate: 1 },
+  EUR: { name: 'Euro', symbol: '€', rate: 1.24 },
+  XAF: { name: 'CFA Franc', symbol: 'FCFA', rate: 0.0016 },
 };
