@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-// simple exchange rates (can later come from constants.js or API)
 const RATES = {
   USD: 1,
   EUR: 0.92,
   XAF: 600,
 };
 
-// convert function (FIX)
 const convert = (amount, from, to) => {
   const inUSD = amount / RATES[from];
   return inUSD * RATES[to];
