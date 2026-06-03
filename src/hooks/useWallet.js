@@ -1,14 +1,9 @@
 import { useState } from "react";
-
-const RATES = {
-  USD: 1,
-  EUR: 0.92,
-  XAF: 600,
-};
+import { CURRENCIES } from "../utils/constants";
 
 const convert = (amount, from, to) => {
-  const inUSD = amount / RATES[from];
-  return inUSD * RATES[to];
+  const inUSD = amount * CURRENCIES[from].rate;
+  return inUSD / CURRENCIES[to].rate;
 };
 
 export const useWallet = () => {
